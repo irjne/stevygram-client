@@ -2,7 +2,9 @@
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item" *ngFor='let chat of chats'>
-                {{ chat.id }}: {{ chat.name }}
+                <a routerLink="{{ chat.id }}">
+                    {{ chat.id }}: {{ chat.name }}
+                </a>
             </li>
         </ul>
     </div>

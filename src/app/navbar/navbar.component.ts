@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Chat } from '../modules/chat';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,15 +6,8 @@ import { Chat } from '../modules/chat';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  //@Output() eventEmitter: EventEmitter<Chat> = new EventEmitter();
-
-
   constructor() { }
 
   ngOnInit() {
   }
-
-  /*onSelectedChat(chat: Chat) {
-    this.eventEmitter.emit(chat);
-  }*/
 }
