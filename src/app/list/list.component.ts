@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   async ngOnInit() {
-    const users = await this.userService.getUsers();
-    console.log('users:', users);
+    this.users = await this.userService.getUsers();
+    console.log('users:', this.users);
   }
 }
