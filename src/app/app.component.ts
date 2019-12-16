@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './user.service';
-import { User } from './modules/users';
+import { User } from './modules/user';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +15,10 @@ export class AppComponent {
 
   async ngOnInit() {
     this.usersList = await this.userService.getUsers()
+  }
+
+  onChangeUser(user :User){
+//TODO
+
   }
 }

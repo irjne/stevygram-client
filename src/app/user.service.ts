@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../app/modules/users';
+import { User } from './modules/user';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -13,3 +13,4 @@ export class UserService {
     return this.httpClient.get<User[]>(this.url).toPromise();
   }
 }
+ 
