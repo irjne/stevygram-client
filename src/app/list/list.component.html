@@ -1,9 +1,8 @@
 <div class="card">
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item" *ngFor='let user of users'>
-                {{ user.name }} - {{ user.surname }} : {{ user.nickname }} -
-                {{ user.phone }}
+            <li class="list-group-item" *ngFor='let chat of chats'>
+                {{ chat.id }}: {{ chat.name }}
             </li>
         </ul>
     </div>

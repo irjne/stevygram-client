@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
-import { User } from './modules/user';
+import { Chat } from './modules/chat';
+import { ChatService } from './chat.service';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +10,10 @@ import { User } from './modules/user';
 export class AppComponent {
   title = 'Stevygram';
 
-  public usersList: User[] = [];
-  constructor(public userService: UserService) { };
+  public chatsList: Chat[] = [];
+  constructor(public chatService: ChatService) { };
 
   async ngOnInit() {
-    this.usersList = await this.userService.getUsers()
-  }
-
-  onChangeUser(user :User){
-//TODO
-
+    this.chatsList = await this.chatService.getChats()
   }
 }

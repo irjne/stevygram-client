@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from '../modules/user';
-import { UserService } from '../user.service';
+import { Chat } from '../modules/chat';
+import { ChatService } from '../chat.service';
 
 @Component({
   selector: 'app-list',
@@ -9,11 +9,11 @@ import { UserService } from '../user.service';
 })
 
 export class ListComponent implements OnInit {
-  public users: User[];
-  constructor(private userService: UserService) { }
+  public chats: Chat[];
+  constructor(private userService: ChatService) { }
 
   async ngOnInit() {
-    this.users = await this.userService.getUsers();
-    console.log('users:', this.users);
+    this.chats = await this.userService.getChats();
+    console.log('users:', this.chats);
   }
 }

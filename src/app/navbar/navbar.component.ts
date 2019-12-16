@@ -1,13 +1,13 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
-import { User } from '../modules/user';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Chat } from '../modules/chat';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  selectedUser : User;
-  @Output () eventEmitter : EventEmitter<User> = new EventEmitter ();
+  //@Output() eventEmitter: EventEmitter<Chat> = new EventEmitter();
 
 
   constructor() { }
@@ -15,8 +15,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelectedUser (user :User){
-    this.selectedUser = user;
-    this.eventEmitter.emit(user);
-  }
+  /*onSelectedChat(chat: Chat) {
+    this.eventEmitter.emit(chat);
+  }*/
 }
