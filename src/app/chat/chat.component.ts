@@ -14,12 +14,13 @@ export class ChatComponent implements OnInit {
 
   constructor(private activeRoute: ActivatedRoute, private chatService: ChatService) { }
 
-  ngOnInit() {
-    //const id = this.activeRoute.snapshot.params.id;
+  async ngOnInit() {
+    const id = this.activeRoute.snapshot.params.id;
+    this.chat = await this.chatService.getChatById(id);
   }
 
-  onChatReceived (chat: Chat) {
+  /*onChatReceived (chat: Chat) {
     this.chat = chat; 
     console.log("Chat: " + this.chat);
-  }
+  }*/
 }

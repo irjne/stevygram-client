@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
   public chats: Chat[];
   public chat: Chat;
 
-  @Output() eventEmitter: EventEmitter<Chat> = new EventEmitter();
+  //@Output() eventEmitter: EventEmitter<Chat> = new EventEmitter();
 
   constructor(private chatService: ChatService) { }
 
@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
     this.chats = await this.chatService.getChats();
   }
 
-  onSelectedChat(chat: Chat) {
+  /*onSelectedChat(chat: Chat) {
     this.eventEmitter.emit(chat);
-  }
+  }*/
 }

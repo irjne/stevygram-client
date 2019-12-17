@@ -6,10 +6,18 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ChatService {
-  public url: string = 'http://localhost:3003/chats'
+  //public url: string = 'http://localhost:3003/chats'
   constructor(private httpClient: HttpClient) { }
 
-  getChats(): Promise<Chat[]> {
+  /*getChats(): Promise<Chat[]> {
     return this.httpClient.get<Chat[]>(this.url).toPromise();
+  }*/
+
+  async getChats(): Promise<Chat[]> {
+    return this.httpClient.get<Chat[]>("http://localhost:3003/chats").toPromise();
+  }
+
+  async getChatById(id: number): Promise<Chat> {
+    return this.httpClient.get<Chat>(`http://localhost:3003/chats/${id}`).toPromise();
   }
 }

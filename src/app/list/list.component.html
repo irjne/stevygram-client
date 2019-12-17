@@ -3,8 +3,9 @@
     <div class="col-md-6 offset-md-3">
         <ul class="list-group ">
             <li class="list-group-item border border-warning bg-secondary" *ngFor='let chat of chats'>
-                <a class=" text-white" (click)="onSelectedChat(chat)" routerLink="{{ chat.id }}" >
-                  📨  {{ chat.id }}: {{ chat.name }}
+                <!--(click)="onSelectedChat(chat)"-->
+                <a class=" text-white" routerLink="{{ chat.id }}">
+                    📨 {{ chat.id }}: {{ chat.name }}
                 </a>
             </li>
         </ul>

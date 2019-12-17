@@ -1,4 +1,7 @@
-<div (eventEmitter) = onChatReceived($event)>
-<h1 class="title-chats">{{ chat.name }} </h1>
-
+<!--<div (eventEmitter) = onChatReceived($event)>-->
+<div>
+    <h1 class="title-chats">{{ chat.name }} </h1>
+    <p>{{ chat.description }}</p>
+    <p>{{ chat.users }}</p>
+    <p *ngFor="let message of chat.messages">{{ message.sender }}, {{ message.body }}, {{ message.date }}</p>
 </div>
