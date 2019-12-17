@@ -14,11 +14,10 @@ export class ListComponent implements OnInit {
 
   @Output() eventEmitter: EventEmitter<Chat> = new EventEmitter();
 
-  constructor(private userService: ChatService) { }
+  constructor(private chatService: ChatService) { }
 
   async ngOnInit() {
-    this.chats = await this.userService.getChats();
-    console.log('chats:', this.chats);
+    this.chats = await this.chatService.getChats();
   }
 
   onSelectedChat(chat: Chat) {
