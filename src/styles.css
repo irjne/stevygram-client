@@ -1,3 +1,10 @@
+h1.title-chats {
+  text-align: center;
+  color: #FFC633;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  
+}
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
