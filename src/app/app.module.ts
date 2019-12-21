@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListComponent } from './list/list.component';
 import { ChatComponent } from './chat/chat.component';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ListComponent,
-    ChatComponent
+    ChatComponent,
+    ListUsersComponent
   ],
   imports: [
     BrowserModule,
