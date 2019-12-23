@@ -3,25 +3,25 @@
     <div class="col-md-8 offset-md-2 ">
         <div class="row">
             <div class="col-4 ">
-            <ul class="list-group ">
-                <li class="list-group-item border border-warning bg-secondary text-white text-center" >
-                    <b>📨CHATS</b>
-                </li>
-            </ul>
-            <ul class="list-group ">
-                <li class="list-group-item border border-warning bg-light text-dark" *ngFor='let chat of chats'>
-                    <!--(click)="onSelectedChat(chat)"-->
-                    <a class="text-secondary" routerLink="{{ chat.id }}">
-                        📨 {{ chat.name }}
-                    </a>
-                </li>
-            </ul>
-            
+                <ul class="list-group ">
+                    <li class="list-group-item border border-warning bg-secondary text-white text-center">
+                        <b>📨CHATS</b>
+                    </li>
+                </ul>
+                <ul class="list-group ">
+                    <li class="list-group-item border border-warning bg-light text-dark" *ngFor='let chat of chats'>
+                        <!--(click)="onSelectedChat(chat)"-->
+                        <a class="text-secondary" routerLink="{{ chat.id }}">
+                            📨 {{ chat.name }}
+                        </a>
+                    </li>
+                </ul>
+
             </div>
-            <div class="col-8 bg-light text-dark text-center border border-warning align-self-center">
+            <!--<div class="col-8 bg-light text-dark text-center border border-warning align-self-center">
                 Chat Description
-            </div>
-            
+            </div>-->
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
