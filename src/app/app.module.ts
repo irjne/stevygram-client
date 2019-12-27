@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ListComponent } from './list/list.component';
 import { ChatComponent } from './chat/chat.component';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListUsersComponent } from './list-users/list-users.component';
     NavbarComponent,
     ListComponent,
     ChatComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
