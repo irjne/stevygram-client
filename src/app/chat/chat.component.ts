@@ -11,16 +11,18 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 })
 export class ChatComponent implements OnInit {
   public chat: Chat;
+  sub;
+  id;
 
-  constructor(private activeRoute: ActivatedRoute, private chatService: ChatService) { }
+  constructor(private activedRoute: ActivatedRoute, private chatService: ChatService) { }
 
   async ngOnInit() {
-    const id = this.activeRoute.snapshot.params.id;
-    this.chat = await this.chatService.getChatById(id);
+    this.sub = this.activedRoute.params.subscribe(async params => {
+      this.id = params['id'];
+      this.chat = await this.chatService.getChatById(this.id);
+    });
   }
 
-  /*onChatReceived (chat: Chat) {
-    this.chat = chat; 
-    console.log("Chat: " + this.chat);
-  }*/
+  //const id = this.activeRoute.snapshot.params.id;
+  //this.chat = await this.chatService.getChatById(id);
 }

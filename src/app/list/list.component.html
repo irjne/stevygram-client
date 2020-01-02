@@ -11,7 +11,7 @@
                 <ul class="list-group ">
                     <li class="list-group-item border border-warning bg-light text-dark" *ngFor='let chat of chats'>
                         <!--(click)="onSelectedChat(chat)"-->
-                        <a class="text-secondary" routerLink="{{ chat.id }}">
+                        <a class="text-secondary" routerLink="{{chat.id}}">
                             📨 {{ chat.name }}
                         </a>
                     </li>
