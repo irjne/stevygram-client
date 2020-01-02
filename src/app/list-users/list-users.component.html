@@ -1,1 +1,14 @@
-<p>list-users works!</p>
+<h1 class="title-users">🤓USERS</h1>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <ul class="list-group ">
+            <li class="list-group-item border border-warning bg-light text-dark" *ngFor='let user of users'>
+                <p class="text-secondary" routerLink="{{user.id}}">
+                    🤓<b> {{ user.nickname }} </b> {{ user.phone }}
+                    <br>
+                    {{ user.name }} {{ user.surname }}
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
