@@ -4,3 +4,7 @@ h1.title-users {
     color: #FFC633;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+
+div {
+    padding-bottom: 2rem;
+}
