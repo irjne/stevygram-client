@@ -6,11 +6,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-  public url: string = 'http://localhost:3003/users'
   constructor(private httpClient: HttpClient) { }
 
-  getUsers(): Promise<User[]> {
-    return this.httpClient.get<User[]>(this.url).toPromise();
+  async getUsers(): Promise<User[]> {
+    return this.httpClient.get<User[]>("http://localhost:3003/users").toPromise();
+  }
+
+  async getAuthorization(phone: string, password: string): Promise<string> {
+    return this.httpClient.post<string>(`http://localhost:3003/users/login/${phone}/${password}`, null).toPromise();
+  }
+
+  async addUser(name: string, surname: string, nickname: string, phone: string): Promise<string> {
+    return this.httpClient.post<string>(`http://localhost:3003/users/`, { nickname, name, surname, phone }).toPromise();
   }
 }
- 

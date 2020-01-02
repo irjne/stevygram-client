@@ -1,66 +1,77 @@
 <div class="container">
-    <h1 class="display-4 text-center" style="color: #FFC633; margin-top: 1rem">🐝STEVYGRAM</h1>
-  </div>
-  <div class="row justify-content-md-center ">
-    <div style="margin-top: 6rem" class="col col-lg-2 text-center">
-        <h3 style="color: #FFC633">LOGIN </h3>
-        <div  class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">🌼</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-             </div>
-             <div style="margin-top: 1rem" class="input-group flex-nowrap">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-wrapping">❓</span>
-                </div>
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-              </div>
-              <div style="margin-top: 1rem" class="text-center">
-              <a class="btn btn-warning" href="#" role="button">LOGIN</a>
-              </div>
+  <h1 class="display-4 text-center" style="color: #FFC633; margin-top: 1rem">🐝STEVYGRAM</h1>
+</div>
+<div class="row col-12 justify-content-md-center ">
+  <div style="margin-top: 6rem" class="col col-lg-2 text-center">
+    <h3 style="color: #FFC633">LOGIN </h3>
+    <div class="input-group flex-nowrap">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">🌼</span>
+      </div>
+      <input [(ngModel)]="phone" type="text" class="form-control" placeholder="Username" aria-label="Username"
+        aria-describedby="addon-wrapping">
     </div>
-    <div class="col-md-auto">
-      <div style="margin-top: 10em" class="text-center">
-        <h5 style="color: #FFC633">OR</h5>
+    <div style="margin-top: 1rem" class="input-group flex-nowrap">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">❓</span>
+      </div>
+      <input [(ngModel)]="password" type="password" class="form-control" placeholder="Password" aria-label="Password"
+        aria-describedby="addon-wrapping">
+    </div>
+    <div style="margin-top: 1rem" class="text-center">
+      <button class="btn btn-warning" href="#" role="button" (click)="login()">LOGIN</button>
+    </div>
+  </div>
+  <div class="col-md-auto">
+    <div style="margin-top: 10em" class="text-center">
+      <h5 style="color: #FFC633">OR</h5>
+    </div>
+  </div>
+  <div class="col col-lg-2">
+    <div class="text-center">
+      <h3 style="color: #FFC633">SIGN UP</h3>
+      <div style="margin-top: 1rem" class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">🌼</span>
+        </div>
+        <input [(ngModel)]="suName" type="text" class="form-control" placeholder="Name" aria-label="Name"
+          aria-describedby="addon-wrapping">
+      </div>
+      <div style="margin-top: 1rem" class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">🌼</span>
+        </div>
+        <input [(ngModel)]="suSurname" type="text" class="form-control" placeholder="Surname" aria-label="Surname"
+          aria-describedby="addon-wrapping">
+      </div>
+      <div style="margin-top: 1rem" class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">🌼</span>
+        </div>
+        <input [(ngModel)]="suNickname" type="text" class="form-control" placeholder="Nickname" aria-label="Nickname"
+          aria-describedby="addon-wrapping">
+      </div>
+      <div style="margin-top: 1rem" class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">🌼</span>
+        </div>
+        <input [(ngModel)]="suPhone" type="text" class="form-control" placeholder="Phone" aria-label="Phone"
+          aria-describedby="addon-wrapping">
+      </div>
+      <div style="margin-top: 1rem" class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">❓</span>
+        </div>
+        <input [(ngModel)]="suPassword" type="password" class="form-control" placeholder="Password"
+          aria-label="Password" aria-describedby="addon-wrapping">
+      </div>
+      <div style="margin-top: 1rem" class="text-center">
+        <button class="btn btn-warning" href="#" role="button" (click)="signup()">SIGN UP</button>
       </div>
     </div>
-    <div class="col col-lg-2">
-      <div class="text-center">
-        <h3 style="color: #FFC633">REGISTER</h3>
-        <div style="margin-top: 1rem" class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">🌼</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="addon-wrapping">
-        </div>
-        <div style="margin-top: 1rem" class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">🌼</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Surname" aria-label="Surname" aria-describedby="addon-wrapping">
-        </div>
-        <div style="margin-top: 1rem" class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">🌼</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname" aria-describedby="addon-wrapping">
-        </div>
-        <div style="margin-top: 1rem" class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">🌼</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="addon-wrapping">
-        </div>
-        <div style="margin-top: 1rem" class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">❓</span>
-            </div>
-            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-          </div>
-        <div style="margin-top: 1rem" class="text-center">
-            <a  class="btn btn-warning" href="#" role="button">REGISTER</a>
-        </div>
-    </div>
-    </div>
   </div>
+  <div class="row col-12 justify-content-md-center message">
+    <p *ngIf="authorization=='failed'">Authorization failed</p>
+    <p *ngIf="signupAlert=='ok'">Sign-up successfully</p>
+  </div>
+</div>
