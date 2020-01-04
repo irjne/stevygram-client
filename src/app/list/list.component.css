@@ -4,6 +4,14 @@ h1.title-chats {
     color: #FFC633;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-div.padding-bot {
-    padding-bottom: 2rem;
+div.line {
+    border-right: solid 1px #FFC633 !important;
+    margin-right: -5%;
+    height: 700px;
+}
+
+div.blocco {
+    width: 60%;
+    height: 700px;
+    margin:1%;
 }

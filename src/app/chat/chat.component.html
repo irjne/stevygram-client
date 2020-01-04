@@ -1,29 +1,26 @@
-<!--<div (eventEmitter) = onChatReceived($event)>-->
-<div class="propriety">
-        <div class="row" data-spy="scroll" data-offset="0">
-                <div class="intern col-md-12 text">
-                        <h4 class="title-chats text-right">{{ chat.name }} </h4>
-                </div>
-                <div class="col-md-12 bg-transparent  text-dark">
-                        <p class="text-warning text-left"><b>Description</b>  {{ chat.description }}</p>
-                        <hr>
-                        <p class="text-secondary text-left"><b>Users</b> {{ chat.users }} </p>
-                </div>
-                <div class="col-md-12 bg-transparent text-dark">
-                        <span class="text-secondary" *ngFor="let message of chat.messages">
-                                <div class= "message rounded border border-warning bg-warning text-dark">
-                                ✉️ {{ message.sender }} {{ message.date }}
+
+<div class="propriety rounded-right">
+        <div class="boxintest bg-transparent text-dark">
+                <h4 class="title-chats">{{ chat.name }}</h4>
+                <p  class="text-warning text-left"><b>Description</b>  {{ chat.description }}</p>
+        </div>
+        <div class="boxuser">             
+                <p class="text-secondary"><b>Users</b> {{ chat.users }} </p>
+        </div>
+
+                <div class="boxmessage bg-transparent text-dark">
+                        <div class= "message border-left border-secondary rounded bg-warning text-dark" *ngFor="let message of chat.messages">
+                                ✉️ {{ message.sender }}<br> {{ message.date }}
                                 <br> {{ message.body }}<br>
-                                </div>
-                        </span>
+                        </div>
                 </div>
-                <div class="input-group mb-3">
+
+                <div class="div-footer input-group mb-3">
                         <input type="text" class="form-control" placeholder="Insert your message" aria-label="Insert your message" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                   <button class="btn btn-outline-secondary" type="button">Send 📩</button>
                                 </div>
                 </div>
-        </div>
-
 </div>
+
 

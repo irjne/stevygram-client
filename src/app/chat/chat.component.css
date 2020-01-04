@@ -1,13 +1,13 @@
 div.propriety {
     width: 100%;
-    height: 10cm;
+    height: 698px;
     word-wrap: break-word;
-    padding-bottom: 2rem;
+    background-color: #DADADA;
+    margin: 0%;
 } 
-div.intern {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 1rem;
+div.row {
+    margin-right: 0px;
+    margin-left: 0px;
 }
 p.title-div {
     color: darkgoldenrod;
@@ -19,6 +19,29 @@ h4.title-chats {
     }
 div.message {
     width: 50%;
-    margin: 2%;
-    padding: 3%;
+    margin: 1%;
+    padding: 2%;
+}
+div.boxintest {
+    height: 12%;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+div.boxuser {
+    padding-left: 1%;
+    height: 11%;
+    overflow-x: hidden;
+}
+div.boxmessage {
+    overflow-x: hidden;
+    width: 100%;
+    height: 70%;
+}
+div.div-footer {
+    width: 100%;
+    height: 0;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    padding: 1%; 
 }

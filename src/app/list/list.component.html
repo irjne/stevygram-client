@@ -1,18 +1,17 @@
-<div class="row paddingbot ">
-    <div class="col-md-8 offset-md-2 ">
-        <div class="row">
-            <div class="col-3" data-spy="scroll" data-offset="0">
-                <ul class="list-group ">
-                    <li class="list-group-item border-0 bg-transparent text-dark" *ngFor='let chat of chats'>
-                        <a class="text-secondary" routerLink="{{chat.id}}">
-                           <b> 📨 {{ chat.name }} </b>
-                        </a>
-                    </li>
-                </ul>
+<div class="blocco rounded border border-warning bg-secondary text-white mx-auto">
+    <div class="row">
+                <div class="col-3" >
+                    <ul class="list-group">
+                        <li class="list-group-item border-right-0 bg-transparent text-dark" *ngFor='let chat of chats'>
+                            <a class="text-white" routerLink="{{chat.id}}">
+                            <b> 📨 {{ chat.name }} </b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
-            <div class="col-8">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </div>
 </div>
+
