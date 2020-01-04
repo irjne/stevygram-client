@@ -1,22 +1,29 @@
 <!--<div (eventEmitter) = onChatReceived($event)>-->
 <div class="propriety">
-        <div class="row">
-                <div class="intern col-md-12 offset-md-1 border border-warning bg-secondary text-dark">
-                        <h1 class="title-chats">{{ chat.name }} </h1>
+        <div class="row" data-spy="scroll" data-offset="0">
+                <div class="intern col-md-12 text">
+                        <h4 class="title-chats text-right">{{ chat.name }} </h4>
                 </div>
-                <div class="intern col-md-12 offset-md-1 border border-warning bg-light text-dark">
-                        <p class="text-warning">Description</p>
-                        <span class="text-secondary">{{ chat.description }}</span>
+                <div class="col-md-12 bg-transparent  text-dark">
+                        <p class="text-warning text-left"><b>Description</b>  {{ chat.description }}</p>
                         <hr>
-                        <p class="text-warning">Users</p>
-                        <span class="text-secondary">{{ chat.users }}</span>
+                        <p class="text-secondary text-left"><b>Users</b> {{ chat.users }} </p>
                 </div>
-                <div class="intern col-md-12 offset-md-1 border border-warning bg-light text-dark">
-                        <p class="text-warning">Messages</p>
-                        <span class="text-secondary"
-                                *ngFor="let message of chat.messages">✉️<br>{{ message.sender }}<br> {{ message.date }}
-                                <br> {{ message.body }}<br></span>
+                <div class="col-md-12 bg-transparent text-dark">
+                        <span class="text-secondary" *ngFor="let message of chat.messages">
+                                <div class= "message rounded border border-warning bg-warning text-dark">
+                                ✉️ {{ message.sender }} {{ message.date }}
+                                <br> {{ message.body }}<br>
+                                </div>
+                        </span>
+                </div>
+                <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Insert your message" aria-label="Insert your message" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button">Send 📩</button>
+                                </div>
                 </div>
         </div>
 
 </div>
+

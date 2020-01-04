@@ -1,5 +1,6 @@
 div.propriety {
     width: 100%;
+    height: 10cm;
     word-wrap: break-word;
     padding-bottom: 2rem;
 } 
@@ -12,7 +13,12 @@ p.title-div {
     color: darkgoldenrod;
     text-align: center;
 }
-h1.title-chats {
+h4.title-chats {
     color: #f1bb31;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+div.message {
+    width: 50%;
+    margin: 2%;
+    padding: 3%;
+}

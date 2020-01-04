@@ -4,3 +4,6 @@ h1.title-chats {
     color: #FFC633;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+div.padding-bot {
+    padding-bottom: 2rem;
+}
