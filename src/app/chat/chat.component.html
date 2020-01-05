@@ -1,26 +1,25 @@
-
 <div class="propriety border-left border-secondary  rounded-right">
         <div class="boxintest bg-light text-dark">
                 <h4 class="title-chats">{{ chat.name }}</h4>
-                <p style="color: #0070B6"  class=" text-left"><b>Description</b>  {{ chat.description }}</p>
+                <p style="color: #0070B6" class=" text-left"><b>Description</b> {{ chat.description }}</p>
         </div>
-        <div class="boxuser bg-light">             
+        <div class="boxuser bg-light">
                 <p class="text-dark "><b>Users</b> {{ chat.users }} </p>
         </div>
 
-                <div class="boxmessage bg-transparent text-dark">
-                        <div class= "message border-left border-secondary rounded  text-light" *ngFor="let message of chat.messages">
-                                ✉️ <b>{{ message.sender }}</b><br> {{ message.date }}
-                                <br> {{ message.body }}<br>
-                        </div>
+        <div class="boxmessage bg-transparent text-dark">
+                <div class="message border-left border-secondary rounded text-light"
+                        *ngFor="let message of chat.messages">
+                        ✉️ <b>{{ message.sender }}</b><br> {{ message.date }}
+                        <br> {{ message.body }}<br>
                 </div>
+        </div>
 
-                <div class="div-footer input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Insert your message" aria-label="Insert your message" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                  <button class="btn btn-light btn-outline-secondary" type="button">Send 📩</button>
-                                </div>
+        <div class="div-footer input-group mb-3">
+                <input type="text" class="form-control" placeholder="Insert your message"
+                        aria-label="Insert your message" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                        <button class="btn btn-light btn-outline-secondary" type="button">Send 📩</button>
                 </div>
+        </div>
 </div>
-
-
