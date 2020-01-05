@@ -1,8 +1,8 @@
-<div class="blocco rounded border text-white mx-auto">
+<div class="blocco bg-light rounded border text-white mx-auto">
     <div class="row">
                 <div class="col-3" >
                     <ul class="list-group">
-                        <li class="list-group-item border-right-0 bg-transparent text-dark" *ngFor='let chat of chats'>
+                        <li class="list-group-item bg-light border-right-0 text-dark" *ngFor='let chat of chats'>
                             <a class="text-dark" routerLink="{{chat.id}}">
                             <b> 📨 {{ chat.name }} </b>
                             </a>
