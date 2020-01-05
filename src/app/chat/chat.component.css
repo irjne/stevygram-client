@@ -1,8 +1,8 @@
 div.propriety {
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2d9dd173426833.5c08f5634ff45.png);
     width: 100%;
     height: 698px;
     word-wrap: break-word;
-    background-color: #DADADA;
     margin: 0%;
 } 
 div.row {
@@ -14,13 +14,14 @@ p.title-div {
     text-align: center;
 }
 h4.title-chats {
-    color: #f1bb31;
+    color: #0070B6;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 div.message {
     width: 50%;
     margin: 1%;
     padding: 2%;
+    background-color: #0070B6;
 }
 div.boxintest {
     height: 12%;
