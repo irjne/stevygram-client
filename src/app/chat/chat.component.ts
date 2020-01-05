@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit {
   async ngOnInit() {
     this.sub = this.activedRouter.params.subscribe(async params => {
       this.id = params['id'];
-      this.chat = await this.chatService.getChatById(this.id);
+      this.chat = await this.chatService.getChatById(this.id, localStorage.getItem('userOnSession'));
     });
   }
 }

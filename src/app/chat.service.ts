@@ -9,10 +9,11 @@ export class ChatService {
   constructor(private httpClient: HttpClient) { }
 
   async getChats(): Promise<Chat[]> {
-    return this.httpClient.get<Chat[]>("http://localhost:3003/chats").toPromise();
+    let token = localStorage.getItem('token');
+    return this.httpClient.get<Chat[]>(`http://localhost:3003/chats?token=${token}`).toPromise();
   }
 
-  async getChatById(id: number): Promise<Chat> {
+  async getChatById(id: number, user: string): Promise<Chat> {
     return this.httpClient.get<Chat>(`http://localhost:3003/chats/${id}`).toPromise();
   }
 }

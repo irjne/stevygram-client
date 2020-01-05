@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Chat } from './modules/chat';
 import { ChatService } from './chat.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,9 @@ import { ChatService } from './chat.service';
 export class AppComponent {
   title = 'Stevygram';
 
-  public chatsList: Chat[] = [];
-  constructor(public chatService: ChatService) { };
+  constructor(private router: Router) { };
 
   async ngOnInit() {
-    this.chatsList = await this.chatService.getChats()
+    this.router.navigate(['login']);
   }
 }

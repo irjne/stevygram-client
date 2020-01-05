@@ -9,7 +9,8 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   async getUsers(): Promise<User[]> {
-    return this.httpClient.get<User[]>("http://localhost:3003/users").toPromise();
+    let token = localStorage.getItem('token');
+    return this.httpClient.get<User[]>(`http://localhost:3003/users?token=${token}`).toPromise();
   }
 
   async getAuthorization(phone: string, password: string): Promise<string> {

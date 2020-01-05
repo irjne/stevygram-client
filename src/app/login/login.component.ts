@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     try {
       this.authorization = await this.userService.getAuthorization(this.phone, this.password);
       localStorage.setItem('token', this.authorization);
+      localStorage.setItem('userOnSession', this.phone);
       this.redirect();
     }
     catch (error) {

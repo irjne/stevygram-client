@@ -8,11 +8,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <!--<li class="nav-item active">
         <a class="nav-link" routerLink="/login">
           🔑 Login
         </a>
-      </li>
+      </li>-->
       <li class="nav-item active">
         <a class="nav-link" routerLink="/chats">
           📨 Chats
@@ -23,9 +23,16 @@
           🤓 Users</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!--<form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
       <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form>-->
+
+    <button type="button" class="btn btn-warning mr-2" routerLink="/login">
+      <span>LOGIN</span>
+    </button>
+    <button type="button" class="btn btn-warning" (click)="logout()">
+      <span>LOGOUT</span>
+    </button>
   </div>
 </nav>

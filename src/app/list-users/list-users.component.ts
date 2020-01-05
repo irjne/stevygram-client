@@ -15,5 +15,6 @@ export class ListUsersComponent implements OnInit {
 
   async ngOnInit() {
     this.users = await this.userService.getUsers();
+    console.log(this.users);
   }
 }
