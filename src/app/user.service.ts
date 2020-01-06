@@ -14,10 +14,10 @@ export class UserService {
   }
 
   async getAuthorization(phone: string, password: string): Promise<string> {
-    return this.httpClient.post<string>(`http://localhost:3003/users/login/${phone}/${password}`, null).toPromise();
+    return this.httpClient.post<string>(`http://localhost:3003/users/login`, { phone, password }).toPromise();
   }
 
-  async addUser(name: string, surname: string, nickname: string, phone: string): Promise<string> {
-    return this.httpClient.post<string>(`http://localhost:3003/users/`, { nickname, name, surname, phone }).toPromise();
+  async addUser(name: string, surname: string, nickname: string, phone: string, password: string): Promise<string> {
+    return this.httpClient.post<string>(`http://localhost:3003/users/`, { nickname, name, surname, phone, password }).toPromise();
   }
 }

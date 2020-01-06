@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
   async signup() {
     try {
-      let result = await this.userService.addUser(this.suName, this.suSurname, this.suNickname, this.suPhone);
+      let result = await this.userService.addUser(this.suName, this.suSurname, this.suNickname, this.suPhone, this.suPassword);
       console.log(result);
       this.signupAlert = "ok";
     }
