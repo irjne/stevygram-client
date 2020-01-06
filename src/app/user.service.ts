@@ -22,8 +22,12 @@ export class UserService {
   }
 
   async addContact(userToAdd: string): Promise<string> {
-    const user = localStorage.getItem('userOnSession');
     let token = localStorage.getItem('token');
     return this.httpClient.post<string>(`http://localhost:3003/users/add-contact?token=${token}`, { "phone": userToAdd }).toPromise();
+  }
+
+  async removeContact(phone: string): Promise<string> {
+    let token = localStorage.getItem('token');
+    return this.httpClient.delete<string>(`http://localhost:3003/users/remove-contact/${phone}?token=${token}`).toPromise();
   }
 }

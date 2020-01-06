@@ -15,7 +15,8 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'users', component: ListUsersComponent },
-  { path: 'users/add-contact', component: AddContactComponent }
+  { path: 'users/add-contact', component: AddContactComponent },
+  { path: 'users/remove-contact/:phone', redirectTo: '/users' }
 ];
 
 @NgModule({

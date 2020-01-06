@@ -15,6 +15,7 @@
                     <br>
                     {{ user.name }} {{ user.surname }}
                 </p>
+                <button class="btn btn-danger" (click)="removeContact(user.phone)">✖️</button>
             </li>
         </ul>
     </div>
