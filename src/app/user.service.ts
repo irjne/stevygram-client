@@ -20,4 +20,10 @@ export class UserService {
   async addUser(name: string, surname: string, nickname: string, phone: string, password: string): Promise<string> {
     return this.httpClient.post<string>(`http://localhost:3003/users/`, { nickname, name, surname, phone, password }).toPromise();
   }
+
+  async addContact(userToAdd: string): Promise<string> {
+    const user = localStorage.getItem('userOnSession');
+    let token = localStorage.getItem('token');
+    return this.httpClient.post<string>(`http://localhost:3003/users/add-contact?token=${token}`, { "phone": userToAdd }).toPromise();
+  }
 }

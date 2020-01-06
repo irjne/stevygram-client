@@ -4,6 +4,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
-  { path: 'users', component: ListUsersComponent }
+  { path: 'users', component: ListUsersComponent },
+  { path: 'users/add-contact', component: AddContactComponent }
 ];
 
 @NgModule({

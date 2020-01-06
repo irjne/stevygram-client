@@ -1,0 +1,23 @@
+<h1 class="title-users">NUOVO CONTATTO</h1>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="col-6 offset-3">
+            <div class="text-center">
+                <div style="margin-top: 1rem" class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">🌼</span>
+                    </div>
+                    <input [(ngModel)]="phone" type="text" class="form-control" placeholder="Phone" aria-label="Phone"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <div style="margin-top: 1rem" class="text-center">
+                    <button class="btn btn-warning" href="#" role="button" (click)="saveOnPhonebook()">SAVE</button>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 justify-content-md-center message">
+            <p *ngIf="alert=='fail'">Insert failed</p>
+            <p *ngIf="alert=='success'">User added successfully</p>
+        </div>
+    </div>
+</div>

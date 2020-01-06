@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { ChatComponent } from './chat/chat.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { LoginComponent } from './login/login.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     ListComponent,
     ChatComponent,
     ListUsersComponent,
-    LoginComponent
+    LoginComponent,
+    AddContactComponent
   ],
   imports: [
     FormsModule,

@@ -34,17 +34,17 @@ export class LoginComponent implements OnInit {
     }
     catch (error) {
       this.authorization = "failed";
+      return error;
     }
   }
 
   async signup() {
     try {
       let result = await this.userService.addUser(this.suName, this.suSurname, this.suNickname, this.suPhone, this.suPassword);
-      console.log(result);
       this.signupAlert = "ok";
     }
     catch (error) {
-      console.log("error: " + error);
+      return error;
     }
   }
 
