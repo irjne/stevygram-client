@@ -1,14 +1,14 @@
 <div class="propriety border-left border-secondary  rounded-right">
         <div class="boxintest bg-light text-dark">
                 <h4 class="title-chats">{{ chat.name }}</h4>
-                <p style="color: #0070B6" class=" text-left"><b>Description</b> {{ chat.description }}</p>
+                <p style="color: #FFC105" class=" text-left"><b>Description</b> {{ chat.description }}</p>
         </div>
         <div class="boxuser bg-light">
                 <p class="text-dark "><b>Users</b> {{ chat.users }} </p>
         </div>
 
         <div class="boxmessage bg-transparent text-dark">
-                <div class="message border-left border-secondary rounded text-light"
+                <div class="message border-left border-secondary rounded text-secondary"
                         *ngFor="let message of chat.messages">
                         ✉️ <b>{{ message.sender }}</b><br> {{ message.date }}
                         <br> {{ message.body }}<br>

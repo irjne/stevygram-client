@@ -2,7 +2,12 @@
     <div class="row">
                 <div class="col-3" >
                     <ul class="list-group">
-                        <li class="list-group-item bg-light border-right-0 text-dark" *ngFor='let chat of chats'>
+                        <li class="newchat text-light text-center list-group-item border border-secondary">
+                              <b> New Chat 🐝</b> 
+                        </li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item chat bg-light border-right-0 text-dark" *ngFor='let chat of chats'>
                             <a class="text-dark" routerLink="{{chat.id}}">
                             <b> 📨 {{ chat.name }} </b>
                             </a>
@@ -11,7 +16,7 @@
                 </div>
                 <div class="col-9">
                     <router-outlet></router-outlet>
+
                 </div>
             </div>
-</div>s
-
+</div>
