@@ -1,11 +1,7 @@
 <div class="blocco bg-light rounded border text-white mx-auto">
     <div class="row">
                 <div class="col-3" >
-                    <ul class="list-group">
-                        <li class="newchat text-light text-center list-group-item border border-secondary">
-                              <b> New Chat 🐝</b> 
-                        </li>
-                    </ul>
+                    <button class="btn newChat btn-secondary col-12 mt-1 mb-1">🐝 New Chat</button> 
                     <ul class="list-group">
                         <li class="list-group-item chat bg-light border-right-0 text-dark" *ngFor='let chat of chats'>
                             <a class="text-dark" routerLink="{{chat.id}}">

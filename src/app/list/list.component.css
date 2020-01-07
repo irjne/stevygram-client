@@ -18,3 +18,8 @@ li.newchat {
 li.newchat:hover {
     background-color: #FFC633;
 }
+button.newChat:hover {
+    background-color: #FFC633;
+    color: #6C757C;
+    text-shadow: #0070B6;
+}

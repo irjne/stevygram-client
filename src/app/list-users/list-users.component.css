@@ -5,6 +5,7 @@ h1.title-users {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
-div {
-    padding-bottom: 2rem;
+div.row {
+    padding: 0px;
+    margin: 0px;
 }
