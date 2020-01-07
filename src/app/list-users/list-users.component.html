@@ -10,15 +10,15 @@
                 </p>
             </li>
             <li class="list-group-item border border-warning bg-light text-dark" *ngFor='let user of users'>
-                <div class="row">
-                    <div class="col-9">
+                <div class="row pb-1">
+                    <div class="col-8 pb-1">
                         <p class="text-secondary">
                             🤓<b> {{ user.nickname }} </b>
                             {{ user.phone }}
                             <br> {{ user.name }} {{ user.surname }}
                         </p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3  ml-3 pb-1">
                         <button class="btn btn-danger text-light" (click)="removeContact(user.phone)">✖️<b>Cancel</b></button>
                     </div>
                 </div>
