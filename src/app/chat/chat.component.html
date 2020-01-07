@@ -1,0 +1,27 @@
+<div class="propriety border-left border-secondary pb-2 rounded-right">
+        <div class="boxintest bg-light text-dark">
+                <h4 class="title-chats">{{ chat.name }}</h4>
+                <p style="color: #FFC105" class=" text-left"><b>Description</b> {{ chat.description }}</p>
+        </div>
+        <div class="boxuser bg-light">
+                <p class="text-dark "><b>Users</b> {{ chat.users }} </p>
+        </div>
+
+        <div class="boxmessage bg-transparent text-dark">
+                <div class="message border-left border-secondary rounded text-secondary"
+                        *ngFor="let message of chat.messages">
+                        ✉️ <b>{{ message.sender }}</b><br> {{ message.date }}
+                        <br> {{ message.body }}<br>
+                </div>
+        </div>
+
+        <div class="div-footer input-group mb-3">
+                <input [(ngModel)]="message" type="text" class="form-control" placeholder="Type you message here"
+                        aria-label="Message" aria-describedby="addon-wrapping">
+                <div class="input-group-append">
+                        <button class="btn btn-light btn-outline-secondary" href="#" role="button"
+                                (click)="addMessage()">Send
+                                📩</button>
+                </div>
+        </div>
+</div>

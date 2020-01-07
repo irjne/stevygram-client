@@ -1,0 +1,50 @@
+<div class="propriety border-left border-secondary pb-2 rounded-right">
+    <h1 class="title-users">NUOVA CHAT</h1>
+    <div class="row">
+        <div class="col-12">
+            <div class="col-6 pb-1 offset-3">
+                <div class="text-center">
+                    <div style="margin-top: 0.3rem" class="input-group flex-nowrap pb-1">
+                        <div class="input-group-prepend pb-0">
+                            <span class="input-group-text" id="addon-wrapping">🌼</span>
+                        </div>
+                        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Name" aria-label="Name"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                    <div style="margin-top: 0.3rem" class="input-group flex-nowrap pb-1">
+                        <div class="input-group-prepend pb-0">
+                            <span class="input-group-text" id="addon-wrapping">🌼</span>
+                        </div>
+                        <input [(ngModel)]="description" type="text" class="form-control" placeholder="Description"
+                            aria-label="Description" aria-describedby="addon-wrapping">
+                    </div>
+                    <!--<div class="mb-3">
+                        <h5 class="title-users">INVITA I TUOI AMICI</h5>
+                        <div style="margin-top: 0rem" class="input-group flex-nowrap pb-0" *ngFor="let user of users">
+                            <input type="checkbox" class="mr-2 mt-1" value="user.phone"
+                                (change)="changeIsChecked(user.phone)">
+                            <span class="text-secondary">{{ user.name }}
+                                {{ user.surname }}</span>
+                        </div>
+                    </div>-->
+                    <h6 class="title-users">Scrivi i numeri di telefono dei tuoi amici, separati soltanto da una
+                        virgola!</h6>
+                    <div style="margin-top: 0.3rem" class="input-group flex-nowrap pb-1">
+                        <div class="input-group-prepend pb-0">
+                            <span class="input-group-text" id="addon-wrapping">🌼</span>
+                        </div>
+                        <input [(ngModel)]="usersToAdd" type="text" class="form-control" placeholder="Users"
+                            aria-label="Users" aria-describedby="addon-wrapping">
+                    </div>
+                    <div style="margin-top: 0.3rem" class="text-center pb-0">
+                        <button class="btn btn-warning" href="#" role="button" (click)="createNewChat()">CREATE</button>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center message">
+                    <p *ngIf="alert=='fail'">Creation failed</p>
+                    <p *ngIf="alert=='success'">Chat created successfully</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+div.message {
+    margin-top: 5rem; 
+}
+
+div.message p {
+    background-color: #F0BE3E;
+    padding: 0.5rem 1rem; 
+    border: 1px solid transparent; 
+    border-radius: 10px;
+}

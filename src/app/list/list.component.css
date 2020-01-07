@@ -1,0 +1,17 @@
+h1.title-chats {
+    padding: 2rem; 
+    text-align: center;
+    color: #FFC633;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+div.chat-box {
+    width: 60%;
+    height: 600px;
+    margin:1%;
+    border: #0070B6 1px solid; 
+}
+li.newchat {
+    background-color: #6C757C;
+}
+

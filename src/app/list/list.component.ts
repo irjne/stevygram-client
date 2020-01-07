@@ -1,19 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { User } from '../modules/users';
-import { UserService } from '../user.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Chat } from '../modules/chat';
+import { ChatService } from '../chat.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
+
 export class ListComponent implements OnInit {
-  // @Input() users: User[];
-  constructor(private userService: UserService) { }
+  public chats: Chat[];
+  public chat: Chat;
+
+  constructor(private router: Router, private chatService: ChatService) { }
 
   async ngOnInit() {
-    const users = await this.userService.getUsers();
-    console.log('users:', users);
+    this.chats = await this.chatService.getChats();
   }
 
+  redirectToNewChat() {
+    this.router.navigate(['chats/new-chat']);
+  }
 }

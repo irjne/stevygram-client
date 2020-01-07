@@ -1,15 +1,33 @@
 import { Injectable } from '@angular/core';
-import { User } from '../app/modules/users';
+import { User } from './modules/user';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  public url: string = 'http://localhost:3003/users'
   constructor(private httpClient: HttpClient) { }
 
-  getUsers(): Promise<User[]> {
-    return this.httpClient.get<User[]>(this.url).toPromise();
+  async getUsers(): Promise<User[]> {
+    let token = localStorage.getItem('token');
+    return this.httpClient.get<User[]>(`http://localhost:3003/users?token=${token}`).toPromise();
+  }
+
+  async getAuthorization(phone: string, password: string): Promise<string> {
+    return this.httpClient.post<string>(`http://localhost:3003/users/login`, { phone, password }).toPromise();
+  }
+
+  async addUser(name: string, surname: string, nickname: string, phone: string, password: string): Promise<string> {
+    return this.httpClient.post<string>(`http://localhost:3003/users/`, { nickname, name, surname, phone, password }).toPromise();
+  }
+
+  async addContact(userToAdd: string): Promise<string> {
+    let token = localStorage.getItem('token');
+    return this.httpClient.post<string>(`http://localhost:3003/users/add-contact?token=${token}`, { "phone": userToAdd }).toPromise();
+  }
+
+  async removeContact(phone: string): Promise<string> {
+    let token = localStorage.getItem('token');
+    return this.httpClient.delete<string>(`http://localhost:3003/users/remove-contact/${phone}?token=${token}`).toPromise();
   }
 }
