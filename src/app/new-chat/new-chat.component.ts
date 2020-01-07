@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Chat } from '../modules/chat';
+import { User } from '../modules/user';
 import { ChatService } from '../chat.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-new-chat',
@@ -11,19 +12,28 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class NewChatComponent implements OnInit {
   public chats: Chat[];
   public chat: Chat;
+  public users: User[];
+  name;
+  description;
+  usersToAdd: string = "";
+  alert;
   sub;
 
-  constructor(private router: Router, private activatedRouter: ActivatedRoute, private chatService: ChatService) { }
+  constructor(private chatService: ChatService, private userService: UserService) { }
 
   async ngOnInit() {
     this.chats = await this.chatService.getChats();
-  }
-  redirectToAddChat() {
-    this.router.navigate(['chats/new-chat']);
-
-    this.sub = this.activatedRouter.params.subscribe(async params => {
-      this.ngOnInit();
-    });
+    this.users = await this.userService.getUsers();
   }
 
+  async createNewChat() {
+    try {
+      this.alert = "success";
+      await this.chatService.createNewChat(this.name, this.description, this.usersToAdd);
+    }
+    catch (error) {
+      this.alert = "fail";
+      return error;
+    }
+  }
 }

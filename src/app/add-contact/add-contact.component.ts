@@ -11,7 +11,7 @@ export class AddContactComponent implements OnInit {
   phone: string;
   alert: string;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }

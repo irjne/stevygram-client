@@ -5,21 +5,13 @@ h1.title-chats {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
-
-div.blocco {
+div.chat-box {
     width: 60%;
-    height: 660px;
+    height: 600px;
     margin:1%;
     border: #0070B6 1px solid; 
 }
 li.newchat {
     background-color: #6C757C;
 }
-li.newchat:hover {
-    background-color: #FFC633;
-}
-button.newChat:hover {
-    background-color: #FFC633;
-    color: #6C757C;
-    text-shadow: #0070B6;
-}
+

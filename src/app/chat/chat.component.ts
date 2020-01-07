@@ -10,6 +10,7 @@ import { ChatService } from '../chat.service';
 })
 export class ChatComponent implements OnInit {
   public chat: Chat;
+  message: string = "";
   sub;
   id;
 
@@ -20,5 +21,10 @@ export class ChatComponent implements OnInit {
       this.id = params['id'];
       this.chat = await this.chatService.getChatById(this.id, localStorage.getItem('userOnSession'));
     });
+  }
+
+  async addMessage() {
+    await this.chatService.addMessage(this.id, this.message);
+    this.ngOnInit();
   }
 }

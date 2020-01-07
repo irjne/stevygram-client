@@ -1,0 +1,56 @@
+h1.title-users {
+    padding: 2rem; 
+    text-align: center;
+    color: #FFC633;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+h5.title-users {
+    padding: 1rem; 
+    text-align: center;
+    color: #FFC633;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h6.title-users {
+    padding: 0.5rem; 
+    text-align: center;
+    color: #6C757C;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div {
+    padding-bottom: 2rem;
+}
+
+div.propriety {
+    /*background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2d9dd173426833.5c08f5634ff45.png);*/
+    width: 100%;
+    height: 599px;
+    word-wrap: break-word;
+    margin: 0%;
+} 
+div.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+p.title-div {
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+div.div-footer {
+    width: 100%;
+    height: 0;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    padding: 1% 3% 1% 3%; 
+}
+
+div.message p {
+    background-color: #F0BE3E;
+    padding: 0.5rem 1rem; 
+    border: 1px solid transparent; 
+    border-radius: 10px;
+}
